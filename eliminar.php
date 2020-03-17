@@ -29,26 +29,25 @@
 <body>
     <form action="guardar_persona.php" method="post">
         <div>
-            <h3>Editar Usuarios</h1>
-        </div>
-        <input type="hidden" name="id" value="<?= $persona->id ?>">
-        <div class="form-group">
-            <label for="">Nombre</label>
-            <input type="text" name="nombre" value="<?= $persona->nombre ?>">
-        </div>
-        <div class="form-group">
-            <label for="">Apellido</label>
-            <input type="text" name="apellido" value="<?= $persona->apellido ?>">
-        </div>
-        <div class="form-group">
-            <label for="">Email</label>
-            <input type="text" name="email" value="<?= $persona->email ?>">
-        </div>
-        <div class="form-group">
-            <label for="">clave</label>
-            <input type="password" name="clave" value="<?= $persona->email ?>">
-        </div>
-        <div>
+            <h3>eliminar usuario</h1>
+            <?php 
+	if(isset($_GET['eliminar'])){
+	
+	$borrar_id = $_GET['eliminar'];
+	
+	$eliminar = "DELETE FROM usuarios WHERE id='$borrar_id'";
+	
+	$ejecutar = mysqli_query($con,$eliminar); 
+		
+		if($ejecutar){
+		
+		echo "<script>alert('El usuario ha sido borrado!')</script>";
+		echo "<script>window.open('formulario.php','_self')</script>";
+		}
+	
+	}
+	
+	?>
             <button type="submit" a href="crear.php">Guardar</button>
             <a href="index.php">Volver</a>
         </div>

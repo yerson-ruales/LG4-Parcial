@@ -17,16 +17,26 @@
             <h3>Crear Usuarios</h1>
         </div>
         <div class="form-group">
-            <label for="">Nombre</label>
-            <input type="text" name="nombre">
+            <label for="">nombre</label>
+            <input type="text" name="nombre" placeholder="escriba su nombre">
         </div>
         <div class="form-group">
-            <label for="">Email</label>
-            <input type="text" name="email">
+            <label for="">apellido</label>
+            <input type="text" name="apellido" placeholder="escriba su apellido">
+        </div>
+        <div class="form-group">
+            <label for="">email</label>
+            <input type="text" name="email" placeholder="escriba su email">
+        </div>
+        <div class="form-group">
+            <hash for="">clave</label><br>
+            <input type="password" name="clave" placeholder="escriba su contraseña">
+            
         </div>
         <div>
-            <button type="submit">Guardar</button>
+            <button type="submit" >Guardar</button>
             <a href="index.php">Volver</a>
+            
         </div>
     </form>
 </body>
